@@ -1,17 +1,8 @@
 import Navbar from '../components/Navbar';
 import portfoliopic from '../pfp.jpg'; // Import the image here, the path is relative to this file
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext'; // Adjust the import path as necessary
-const About = () => {
-    const { isDirectAccess } = useAuth();
-    const navigate = useNavigate();
 
-    useEffect(() => {
-      if (isDirectAccess) {
-        navigate('/');
-      }
-    }, [navigate, isDirectAccess]);
+const About = () => {
+    
 
     return (
         <div className='bg-[#FAEED1]'>
