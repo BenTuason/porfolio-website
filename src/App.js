@@ -3,10 +3,11 @@ import './index.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import About from "./pages/About";
 import Life from "./pages/Life";
-
+import {AuthProvider } from './contexts/AuthContext';
 
 function App() {
   return (
+    <AuthProvider>
     <BrowserRouter>
       <Routes>
         {/* Basic Routes */}
@@ -15,6 +16,7 @@ function App() {
         <Route path="/Life" element={<Life />}/>
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
   );
 }
 

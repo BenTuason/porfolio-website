@@ -9,7 +9,7 @@ const Home = () => {
         setSelectedProject(projectName);
     };
   return (
-    <div>
+    <div className='bg-[#FAEED1]'>
       <Navbar />
       <div className='flex'> {/* Main flex container */}
         

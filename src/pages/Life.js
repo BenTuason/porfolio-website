@@ -27,8 +27,9 @@ import P26 from '..//taipeileaves.jpg'
 import P27 from '..//uncle.jpg'
 import P28 from '..//yanniPilar.jpg'
 const Life = () => {
+    
     return (
-        <div>
+        <div className='bg-[#FAEED1]'>
             <Navbar />
             <h1 className='text-bold font-bold text-xl mb-10 ml-2'>These are images showcasing my life/travels/adventures</h1>
             <div className='lifepics flex  flex-wrap justify-center gap-2'>
@@ -36,7 +37,7 @@ const Life = () => {
             <img src={P1} alt="Allison and Austin" className='rounded-lg w-1/2 h-auto'/>
             <img src={P2} alt="Animation Workshop" className=' rounded-lg  w-1/4 h-auto'/>
             <img src={P4} alt="CaseQuest" className=' rounded-lg  w-1/4 h-auto'/>
-            <img src={P5} alt="Christmas Picture with Ethan and Celine" className=' rounded-lg  w-1/4 h-auto'/>
+            <img src={P5} alt="Christmas with Ethan and Celine" className=' rounded-lg  w-1/4 h-auto'/>
             <img src={P6} alt="Communion" className=' rounded-lg  w-1/4 h-auto'/>
             <img src={P7} alt="Concert1" className=' rounded-lg  w-1/3 h-auto'/>
             <img src={P8} alt="Concert2" className=' rounded-lg  w-1/2 h-auto'/>

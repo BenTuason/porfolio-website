@@ -1,19 +1,30 @@
 import Navbar from '../components/Navbar';
 import portfoliopic from '../pfp.jpg'; // Import the image here, the path is relative to this file
-
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext'; // Adjust the import path as necessary
 const About = () => {
+    const { isDirectAccess } = useAuth();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      if (isDirectAccess) {
+        navigate('/');
+      }
+    }, [navigate, isDirectAccess]);
+
     return (
-        <div>
+        <div className='bg-[#FAEED1]'>
             <Navbar />
             
             <div className="container mx-auto flex flex-col md:flex-row"> {/* This div will be flex container */}
                 {/* Image will shrink/grow as needed */}
-                <img src={portfoliopic} alt="Ben pfp" className='ml-2 w-1/3 h-auto mr-7'/>
+                <img src={portfoliopic} alt="Ben pfp" className='w-1/2 h-auto mr-7 mt-3 mb-3 '/>
                 
                 {/* Paragraph styled to be on the right of the image */}
                 <div className='text-base md:ml-4'>
                 {/* Things I like, Goals, Hobbies, Things I'm learning, Things I want to learn, top 5 songs*/}
-                <h1 className='font-bold text-align center'>About Me</h1>
+                <h1 className='font-bold text-align center mt-3'>About Me</h1>
                 <div className='aboutmetext'>
                 <p>Goals: My goal in life is to help my family and have a bright future with my girlfriend. My carreer goals are to help the environment by optimizing computing efficiency and reduce carbon emissions through Computer Science. I also want to pursue either a Master's Degree or a PhD in either Computer Science or Mathematics.</p>
                 <br></br>

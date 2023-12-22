@@ -6,7 +6,7 @@ const Navbar = () => {
 
     return(
         <div>
-            <div className='w-screen h-20  flex justify-between items-center'>
+            <div className='bg-[#B2A59B] w-screen h-20  flex justify-between items-center'>
                 <div className='flex items-center justify-center gap-4 ml-6'>
                     
                     <button onClick={() => navigate("/")} className='text-2xl text-black hover:underline'> Ben Tuason </button> 
