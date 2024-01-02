@@ -29,7 +29,7 @@ const Home = () => {
           
           <div className='contactMe text-center sm:flex sm:flex-row sm:flex-wrap md:flex-col'>
     
-    <h1 className='w-full font-bold mb-2 sm:mb-0 py-1'>Contact Me!</h1>
+    <h1 className='w-full font-bold mb-2 sm:mb-0'>Contact Me!</h1>
     <div className='flex flex-wrap justify-center'>
         <a className='px-4 hover:underline' href="mailto:benjosedaa@gmail.com">Email</a>
         <a className='px-4 hover:underline' href="https://www.instagram.com/benttuason/">Instagram</a>
@@ -57,7 +57,7 @@ const Home = () => {
             <h2 className='underline'>Ferguson Control Systems Co-op</h2>
             <h3 className='italic py-2'>November 2023 - Present</h3>
             <p>
-              Leading a student group as the technical lead to educate on training CNNs, RNNs, 
+              Leading a student group as the technical lead to train deep learning models such as CNNs, RNNs, 
               and transformers for tasks like image recognition and language processing, while 
               also conducting research on blockchain data to analyze smart contract interactions 
               and token transfers, enhancing data visualization tools and effort distribution.
@@ -105,7 +105,7 @@ const Home = () => {
   
   <div className=' border-solid border-2 border-gray-500 no-underline grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center'>
   <button className='item1 hover:underline' onClick={() => showProjectDescription('cpu')}>Digital CPU</button>
-  <button className='item2 hover:underline' onClick={() => showProjectDescription('traffic')}>Real Time Traffic Router & Scheduler</button>
+  <button className='item2 hover:underline' onClick={() => showProjectDescription('traffic')}>Real-Time Traffic Router & Scheduler</button>
   <button className='item3 hover:underline' onClick={() => showProjectDescription('library')}>Full-Stack Library Web-App</button>
   <button className='item4 hover:underline' onClick={() => showProjectDescription('quantum')}>Quantum Computing Tic-Tac-Toe</button>  
   <button className='item5 hover:underline' onClick={() => showProjectDescription('cloud')}>AWS ETL Data Pipeline</button>
@@ -140,35 +140,98 @@ const Home = () => {
                         </div>
                 )}
     {selectedProject === 'traffic' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Traffic description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Real-Time Traffic Router & Scheduler</h1>
+                        <p className='mx-2 text-justify'>From my Research with Professor Albert Cheng and two other teammates at the UH Real-Time Systems Lab, I spearheaded the development of a 
+                        Python-based, rate-monotonic scheduling algorithm aimed at revolutionizing traffic management in Houston. Utilizing a blend of advanced machine 
+                        learning techniques, including Q-learning, linear regression, and reinforcement learning, the project was anchored on TensorFlow, Keras, and NumPy. 
+                        My approach involved meticulously developing and fine-tuning machine learning models to simulate and optimize traffic patterns, achieving a notable 
+                        89% accuracy rate. This precision in modeling, coupled with effective parameter tuning and dataset preprocessing, led to a marked improvement in real-time traffic routing. 
+                        The result was a substantial enhancement in routing efficiency, reducing average commute times and streamlining the city’s traffic flow, ultimately achieving a 
+                        significant reduction in training time and a 15% increase in routing efficacy.
+                        </p>
                         </div>
                 )}
     {selectedProject === 'library' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Library description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Full-Stack Library Web-App</h1>
+                        <p className='mx-2 text-justify'>In my Database Design course at the University of Houston, I headed a team of five in the intricate development 
+                        of a full-stack library web application over a semester. This project involved a multifaceted technology stack: ReactJS for interactive and dynamic 
+                        user interface creation, NodeJS for building a scalable and efficient server-side environment, MySQL for robust and reliable database management, 
+                        and TailwindCSS for crafting a responsive and modern user experience, all while ensuring optimal deployment on Heroku’s cloud platform. My role as 
+                        the team leader entailed conducting thorough code reviews, where I emphasized clean coding practices and efficient algorithm implementation. 
+                        Additionally, I managed and fine-tuned project timelines, focusing on modular development and systematic integration, thereby crafting an 
+                        application that was not only functional and secure but also finely tuned to user needs in terms of usability and performance.
+                        </p>
                     </div>
                 )}
     {selectedProject === 'quantum' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Quantum description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Quantum Computing Tic-Tac-Toe</h1>
+                        <p className='mx-2 text-justify'>
+                        After learning about my mathematical proofs professor's research in quantum computing and information theory, a field I've heard about, I took my 
+                        first hands-on plunge into this domain by developing a Quantum Tic-Tac-Toe game. This project incorporated quantum superposition and entanglement 
+                        principles, allowing the simulation of over 10,000 quantum state transitions. It served as a practical exploration into the computational capabilities 
+                        of quantum algorithms, especially in managing complex game dynamics. To create the project, I utilized Qiskit for engineering efficient quantum circuit
+                         simulations, focusing on optimizing quantum gate operations. This endeavor not only deepened my understanding of quantum computing but also demonstrated 
+                         its potential in algorithmic problem-solving and creating advanced game mechanics.
+                        </p>
                     </div>
                 )}
     {selectedProject === 'cloud' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Cloud description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>AWS ETL Data Pipeline</h1>
+                        <p className='mx-2 text-justify'>                      
+                        I built a project that introduced me to cloud computing and AWS, focusing on creating an AWS ETL Data Pipeline. This pipeline was meticulously 
+                        designed to process data from the Open Weather Map API, utilizing Python for scripting and AWS Glue for seamless data integration. I leveraged AWS S3 buckets for efficient 
+                        data storage and AWS Redshift for robust data warehousing, ensuring a reliable and scalable storage solution. The project also featured the integration of Spark within the 
+                        AWS environment to expedite data processing, enhancing the pipeline's overall performance. To streamline the workflow, I implemented Airflow, automating the ETL process which 
+                        not only reduced the manual effort significantly but also improved the operational efficiency of the data pipeline. This experience provided me with a deep understanding of 
+                        cloud-based data management and the intricacies of managing large-scale data workflows.
+                        </p>
                     </div>
                 )}
     {selectedProject === 'sorting' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Sorting Algorithms description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Sorting Algorithms Visualizer</h1>
+                        <p className='mx-2 text-justify'>
+                        I developed a website dedicated to visualizing various sorting algorithms like heap sort, bubble sort, insertion sort, quick sort, 
+                        and merge sort. This project was instrumental in enhancing my understanding of algorithmic complexities, leading to more efficient 
+                        sorting implementations. The website featured a sorting speed adjuster, allowing users to interactively manipulate the speed of the 
+                        algorithms. This interactive element not only made the complexities of these algorithms more accessible but also provided a clearer 
+                        insight into their operational mechanics, thereby aiding in user comprehension of these fundamental computer science concepts.
+                        </p>
                     </div>
                 )}
     {selectedProject === 'discord' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Discord description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Discord Reminder Bot</h1>
+                        <p className='mx-2 text-justify'>
+                        A simple Discord reminder bot made with java, designed for a private server shared with my girlfriend. The bot's primary function is to send 
+                        daily reminders in a specific text-channel named 'gratitude', prompting both of us to write one thing we're grateful for each 
+                        night. This small yet meaningful automation fosters a habit of reflection and gratitude in our daily routine, enhancing our c
+                        onnection and mindfulness. The bot serves as a gentle nudge to pause and appreciate the small joys and blessings in our lives, 
+                        reinforcing positive habits within our personal space on Discord.
+                        </p>
                     </div>
                 )}
     {selectedProject === 'girlfriend' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Girlfriend Christmas Gift description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>AI Image Generator</h1>
+                        <p className='mx-2 text-justify'> 
+                        I created an interactive web-based image generator named "UIAUI Generator" as a unique Christmas gift for my girlfriend. The acronym 
+                        "UIAUI" stands for "Us In Another Universe Image," and the application allows users to generate imaginative images of us as different 
+                        entities, like raccoons in a trashcan or tomatoes on a vine. It also functions as a normal image generator. Built using ReactJS for a 
+                        user-friendly front-end, the generator integrates OpenAI's API to dynamically create images based on user inputs. To ensure a smooth and 
+                        responsive user experience, I implemented React Hooks for efficient state management, maintaining the application's state for image URLs 
+                        and loading status. This approach enabled real-time UI updates in response to user interactions and API requests, ensuring the application 
+                        remained responsive and efficient, even during periods of high usage. 
+                        </p>
                     </div>
                 )}
     {selectedProject === 'blockchain' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Blockchain Data Visualizer description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Blockchain Data Visualizer</h1>
+                        <p className='mx-2 text-justify'>
+                        Currently, as part of a co-op with Ferguson Control Systems, who have connections with MISSO, I am leading a student group as the technical 
+                        lead in a research project focused on blockchain analytics and data visualization. Our primary objective is to meticulously analyze blockchain 
+                        data, delving into transaction patterns, smart contract interactions, and token transfers. A significant aspect of our work involves creating 
+                        and enhancing data visualization tools, which are crucial for improved data comprehension. This ongoing project not only allows us to explore 
+                        the intricate dynamics of blockchain technology but also to develop and refine tools that make complex data more accessible and understandable. 
+                        Our efforts are geared towards distributing tasks effectively within the group, ensuring a comprehensive and insightful analysis of blockchain data.
+                        </p>
                     </div>
                 )}
     </div>
