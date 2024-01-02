@@ -144,7 +144,7 @@ const Home = () => {
                         </div>
                 )}
     {selectedProject === 'library' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1>Library description</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Library description</h1>
                     </div>
                 )}
     {selectedProject === 'quantum' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
