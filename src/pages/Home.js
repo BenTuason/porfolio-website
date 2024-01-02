@@ -139,36 +139,36 @@ const Home = () => {
                         </ul>
                         </div>
                 )}
-    {selectedProject === 'traffic' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
+    {selectedProject === 'traffic' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
                         <h1 className='font-bold text-2xl text-left mx-2'>Traffic description</h1>
                         </div>
                 )}
-    {selectedProject === 'library' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
+    {selectedProject === 'library' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
                         <h1>Library description</h1>
                     </div>
                 )}
-    {selectedProject === 'quantum' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
-                        <h1>Quantum description</h1>
+    {selectedProject === 'quantum' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Quantum description</h1>
                     </div>
                 )}
-    {selectedProject === 'cloud' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
-                        <h1>Cloud description</h1>
+    {selectedProject === 'cloud' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Cloud description</h1>
                     </div>
                 )}
-    {selectedProject === 'sorting' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
-                        <h1>Sorting Algorithms description</h1>
+    {selectedProject === 'sorting' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Sorting Algorithms description</h1>
                     </div>
                 )}
-    {selectedProject === 'discord' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
-                        <h1>Discord description</h1>
+    {selectedProject === 'discord' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Discord description</h1>
                     </div>
                 )}
-    {selectedProject === 'girlfriend' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
-                        <h1>Girlfriend Christmas Gift description</h1>
+    {selectedProject === 'girlfriend' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Girlfriend Christmas Gift description</h1>
                     </div>
                 )}
-    {selectedProject === 'blockchain' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
-                        <h1>Blockchain Data Visualizer description</h1>
+    {selectedProject === 'blockchain' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Blockchain Data Visualizer description</h1>
                     </div>
                 )}
     </div>
