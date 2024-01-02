@@ -1,15 +1,16 @@
 import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
-
+import CPU from './CPU.png';
+import brens from './Brenshams.png'
 
 const Home = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState('cpu');
 
     const showProjectDescription = (projectName) => {
         setSelectedProject(projectName);
     };
   return (
-    <div className='bg-[#FAEED1]'>
+    <div className='bg-[#FAEED1] h-screen w-full overflow-x-hidden'>
       <Navbar />
       <div className='flex'> {/* Main flex container */}
         
@@ -32,10 +33,10 @@ const Home = () => {
         <a className='px-4 hover:underline' href="https://github.com/ben123-source">GitHub</a>
     </div>
 </div>
-          <div className='overflow-y-scroll max-h-[500px] ml-2 mr-2 experiences border-solid border-2 border-gray-500'>
+          <div className='overflow-y-auto max-h-screen ml-2 mr-2 experiences border-solid border-2 border-gray-600'>
             {/* Experiences */}
             <h1 className=' font-bold py-2 ml-2 mr-2'>Experiences</h1>
-            <div className="experience py-2 ml-2 mr-2">
+            <div className="experience py-2 ml-2 mr-2 flex-grow">
             <h2 className='py-2 underline'>University of Houston Intelligent Data and Systems Lab (IDS)</h2>
             <h3 className='italic py-2'>November 2023 - Present</h3>
             <p>
@@ -90,22 +91,42 @@ const Home = () => {
         
         {/* Flexbox for Projects */}
         <div className='ml-2 mr-2 projects' style={{ width: '100%' }}> 
-  <h1 className='font-bold py-8 text-center'>Projects</h1>
+  <h1 className='font-bold py-8 text-center mt-5'>Projects</h1>
   
-  <div className=' border-solid border-2 border-gray-500 no-underline  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center'>
-  <button className='item1 hover:underline' onClick={() => showProjectDescription('cpu')}>Digital 8-bit CPU</button>
-  <button className='item2 hover:underline' onClick={() => showProjectDescription('traffic')}>Traffic Routing</button>
-  <button className='item3 hover:underline' onClick={() => showProjectDescription('library')}>Full-Stack Library</button>
-  <button className='item4 hover:underline' onClick={() => showProjectDescription('quantum')}>Quantum Qiskit Project</button>  
-  <button className='item5 hover:underline' onClick={() => showProjectDescription('cloud')}>Cloud Project</button>
+  <div className=' border-solid border-2 border-gray-500 no-underline  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center '>
+  <button className='item1 hover:underline' onClick={() => showProjectDescription('cpu')}>Digital CPU</button>
+  <button className='item2 hover:underline' onClick={() => showProjectDescription('traffic')}>Real Time Traffic Router & Scheduler</button>
+  <button className='item3 hover:underline' onClick={() => showProjectDescription('library')}>Full-Stack Library Web-App</button>
+  <button className='item4 hover:underline' onClick={() => showProjectDescription('quantum')}>Quantum Computing Tic-Tac-Toe</button>  
+  <button className='item5 hover:underline' onClick={() => showProjectDescription('cloud')}>AWS ETL Data Pipeline</button>
   <button className='item6 hover:underline' onClick={() => showProjectDescription('sorting')}>Sorting Algorithms Visualizer</button>
   <button className='item7 hover:underline' onClick={() => showProjectDescription('discord')}>Discord Reminder Bot</button>
-  <button className='item8 hover:underline' onClick={() => showProjectDescription('girlfriend')}>Girlfriend Christmas Gift</button>
+  <button className='item8 hover:underline' onClick={() => showProjectDescription('girlfriend')}>AI Image Generator </button>
   <button className='item9 hover:underline' onClick={() => showProjectDescription('blockchain')}>Blockchain Data Visualizer</button>
     </div>
-    {selectedProject === 'cpu' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
-                        <h1>CPU description</h1>
-                        <p>This is a digital 8-bit CPU with a full arithmetic logic unit.</p>
+    {selectedProject === 'cpu' && (<div className='projectdescription flex flex-col border-solid border-2 border-gray-600 mt-2 p-3'>
+                        <div className='w-full flex justify-center mt-2 mb-2'>
+                        <img src={brens} alt='Brenshams Algorithm' className='mr-11 w-1/3'/>
+                        <img src={CPU} alt='CPU Screenshot' className = 'ml-11 w-1/3'/>                        
+                        </div>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Digital CPU</h1>
+                        <p className='mx-2 text-justify'>This was my first experience with computer architecture. I started this project because I wanted to learn more about CPUs and GPUs.
+                          I built the project fully in Logism for the architecture and Python to aid with mathematical calculations and to aid with writing up assembly code. I'm still working on more features such as a mathematics library capable of doing trigonometric 
+                          calculations, matrix multiplication, and more mathematical operations. The project has the minimum necessities and functionalities for a CPU.
+                          The goal is to have a digital CPU capable of completing complicated mathematical operations.  
+                        </p>
+                        <ul className='mx-2 max-h-screen'>
+                          <li >Features:</li>
+                          <li>-Index Register</li>
+                          <li>-Arithmetic Logic Unit</li>
+                          <li>-Execute Brensham's Algorithm</li>
+                          <li>-Assembler </li>
+                          <li>-6 General Purpose Registers </li>
+                          <li>-Temporary Register </li>
+                          <li>-Index Register </li>
+                          <li>-Stack Pointer Register </li>
+                          <li>-Floating Point Unit Register</li>
+                        </ul>
                         </div>
                 )}
     {selectedProject === 'traffic' && (<div className='projectdescription flex flex-col items-center justify-center border-solid border-2 border-gray-500 mt-2'>
