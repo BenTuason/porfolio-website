@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
 import CPU from './CPU.png';
 import brens from './Brenshams.png'
-
+import pipe from './pipelien.png'
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState('cpu');
 
@@ -176,6 +176,9 @@ const Home = () => {
                     </div>
                 )}
     {selectedProject === 'cloud' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <div className='w-full flex justify-center mt-2 mb-2'>
+                        <img src={pipe} alt='Pipeline Architecture' className='mx-2 w-1/2'/>
+                        </div>
                         <h1 className='font-bold text-2xl text-left mx-2'>AWS ETL Data Pipeline</h1>
                         <p className='mx-2 text-justify'>                      
                         I built a project that introduced me to cloud computing and AWS, focusing on creating an AWS ETL Data Pipeline. This pipeline was meticulously 
