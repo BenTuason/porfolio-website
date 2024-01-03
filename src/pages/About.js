@@ -5,7 +5,7 @@ const About = () => {
     
 
     return (
-        <div className='bg-[#FAEED1] h-screen'>
+        <div className='bg-[#FAEED1] min-h-screen'>
             <Navbar />
             
             <div className="container mx-auto flex flex-col md:flex-row"> {/* This div will be flex container */}
