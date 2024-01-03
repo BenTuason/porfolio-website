@@ -5,12 +5,12 @@ const About = () => {
     
 
     return (
-        <div className='bg-[#FAEED1]'>
+        <div className='bg-[#FAEED1] h-screen'>
             <Navbar />
             
             <div className="container mx-auto flex flex-col md:flex-row"> {/* This div will be flex container */}
                 {/* Image will shrink/grow as needed */}
-                <img src={portfoliopic} alt="Ben pfp" className='w-1/2 h-auto mr-7 mt-3 mb-3 '/>
+                <img src={portfoliopic} alt="Ben pfp" className='ml-2 w-1/3 mr-2 mt-3 mb-3 '/>
                 
                 {/* Paragraph styled to be on the right of the image */}
                 <div className='text-base md:ml-4'>
