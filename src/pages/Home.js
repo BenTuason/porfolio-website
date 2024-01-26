@@ -43,6 +43,15 @@ const Home = () => {
             {/* Experiences */}
             <h1 className=' font-bold py-2 ml-2 mr-2'>Experiences</h1>
             <div className="experience py-2 ml-2 mr-2">
+            <h2 className='py-2 underline'>University of Houston Teaching Assistant</h2>
+            <h3 className='italic py-2'>January 2024 - Present</h3>
+            <p>
+              Currently TA'ing for my University's database systems and design course. Grading projects and holding office hours
+              where I help students with any class-related questions.
+            </p>
+            <p className='w-full border-t-2 border-gray-600 my-2'></p>
+          </div>
+            <div className="experience py-2 ml-2 mr-2">
             <h2 className='py-2 underline'>University of Houston Intelligent Data and Systems Lab (IDS)</h2>
             <h3 className='italic py-2'>November 2023 - Present</h3>
             <p>
