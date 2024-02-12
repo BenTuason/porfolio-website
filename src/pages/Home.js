@@ -22,7 +22,7 @@ const Home = () => {
               Skills:
               <li>- Python (Classiq, Qiskit, Tensorflow, Pytorch, Numpy, Matplotlib, Scipy, Web3py)</li>
               <li>- C/C++</li>
-              <li>- ReactJS, NodeJS</li>
+              <li>- ReactJS, NodeJS, MySQL, SQL</li>
               <li>- Git/Github</li>
               <li>- AWS Lambda Functions</li>
               <li>- Matlab, R</li>
