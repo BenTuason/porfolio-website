@@ -1,10 +1,7 @@
 import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
-import CPU from './CPU.png';
-import brens from './Brenshams.png'
-import pipe from './pipelien.png'
 const Home = () => {
-  const [selectedProject, setSelectedProject] = useState('cpu');
+  const [selectedProject, setSelectedProject] = useState('traffic');
 
     const showProjectDescription = (projectName) => {
         setSelectedProject(projectName);
@@ -19,7 +16,18 @@ const Home = () => {
         <div className='w-1/3 overflow-y-auto experiences border-solid border-2 border-gray-600 mx-5 my-2 '> {/* Adjust the width as needed */}
           <div className="intro text">
             {/* Intro Text */}
-            <p className='ml-2 mr-2'>Hello! My name is Ben Tuason and I am an enthusiastic student eager to explore and gain hands-on experience in various aspects of technologies. </p>
+            <p className='ml-2 mr-2'>Hello! My name is Ben Tuason and my goals are to pursue a PhD in Computer Science and to reduce carbon emissions from current computing services.</p>
+            <p className='ml-2 mr-2 mt-2'>My research interests include a machine learning, deep learning, high-performance computing, cloud computing, cryptography, and optimization.</p>
+            <ul className='ml-2 mr-2 mt-2'>
+              Skills:
+              <li>- Python (Classiq, Qiskit, Tensorflow, Pytorch, Numpy, Matplotlib, Scipy, Web3py)</li>
+              <li>- C/C++</li>
+              <li>- ReactJS, NodeJS</li>
+              <li>- Git/Github</li>
+              <li>- AWS Lambda Functions</li>
+              <li>- Matlab, R</li>
+
+            </ul>
           </div>
           <div className="studies py-3">
             {/* Studies */}
@@ -113,39 +121,26 @@ const Home = () => {
   <h1 className='font-bold py-2 text-center'>Projects</h1>
   
   <div className=' border-solid border-2 border-gray-500 no-underline grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center'>
-  <button className='item1 hover:underline' onClick={() => showProjectDescription('cpu')}>Digital CPU</button>
-  <button className='item2 hover:underline' onClick={() => showProjectDescription('traffic')}>Real-Time Traffic Router & Scheduler</button>
+  <button className='item2 hover:underline' onClick={() => showProjectDescription('matlab')}>Matlab Projects</button>
   <button className='item3 hover:underline' onClick={() => showProjectDescription('library')}>Full-Stack Library Web-App</button>
-  <button className='item4 hover:underline' onClick={() => showProjectDescription('quantum')}>Quantum Computing Tic-Tac-Toe</button>  
-  <button className='item5 hover:underline' onClick={() => showProjectDescription('cloud')}>AWS ETL Data Pipeline</button>
-  <button className='item6 hover:underline' onClick={() => showProjectDescription('sorting')}>Sorting Algorithms Visualizer</button>
-  <button className='item7 hover:underline' onClick={() => showProjectDescription('discord')}>Discord Reminder Bot</button>
+  <button className='item4 hover:underline' onClick={() => showProjectDescription('quantum')}>MIT iQuHack Quantum Computing Hackathon</button>  
   <button className='item8 hover:underline' onClick={() => showProjectDescription('girlfriend')}>AI Image Generator </button>
   <button className='item9 hover:underline' onClick={() => showProjectDescription('blockchain')}>Blockchain Data Visualizer</button>
     </div>
-    {selectedProject === 'cpu' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <div className='w-full flex justify-center mt-2 mb-2'>
-                        <img src={brens} alt='Brenshams Algorithm' className='mr-11 w-1/3'/>
-                        <img src={CPU} alt='CPU Screenshot' className = 'ml-11 w-1/3'/>                        
-                        </div>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Digital CPU</h1>
-                        <p className='mx-2 text-justify'>This was my first experience with computer architecture. I started this project because I wanted to learn more about CPUs and GPUs.
-                          I built the project fully in Logism for the architecture and Python to aid with mathematical calculations and to aid with writing up assembly code. I'm still working on more features such as a mathematics library capable of doing trigonometric 
-                          calculations, matrix multiplication, and more mathematical operations. The project has the minimum necessities and functionalities for a CPU.
-                          The goal is to have a digital CPU capable of completing complicated mathematical operations.  
+    {selectedProject === 'matlab' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
+                        <h1 className='font-bold text-2xl text-left mx-2'>Matlab Projects</h1>
+                        <h2 className='font-bold text-xl text-left mx-2 mt-3'>Polynomial Interpretation</h2>
+                        <p className='mx-2 text-justify'> Optimized a 5th-degree polynomial to fit data points and compared it to the sine function for accuracy. This involved 
+                        mathematical techniques for error minimization and graphical analysis to evaluate the fit.
                         </p>
-                        <ul className='ml-2'>
-                          <li >Features:</li>
-                          <li>-Index Register</li>
-                          <li>-Arithmetic Logic Unit</li>
-                          <li>-Execute Brensham's Algorithm</li>
-                          <li>-Assembler </li>
-                          <li>-6 General Purpose Registers </li>
-                          <li>-Temporary Register </li>
-                          <li>-Index Register </li>
-                          <li>-Stack Pointer Register </li>
-                          <li>-Floating Point Unit Register</li>
-                        </ul>
+                        <h2 className='font-bold text-xl text-left mx-2 mt-3'>Fourier Transform</h2>
+                        <p className='mx-2 text-justify'> developed a MATLAB application that calculates Fourier coefficients, computes series values, and graphically
+                         represents functions and their derivatives. The tool simplifies the exploration of Fourier series by automating complex calculations and visualizing results.
+                        </p>
+                        <h2 className='font-bold text-xl text-left mx-2 mt-3'>Gram-Schmidt Process</h2>
+                         <p className='mx-2 text-justify'> created a MATLAB script to convert a set of vectors into orthogonal and orthonormal bases. This script demonstrates the 
+                         application of linear algebra principles in transforming vectors, showcasing proficiency in numerical methods and linear algebra through MATLAB programming.
+                        </p>
                         </div>
                 )}
     {selectedProject === 'traffic' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
@@ -173,51 +168,13 @@ const Home = () => {
                     </div>
                 )}
     {selectedProject === 'quantum' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Quantum Computing Tic-Tac-Toe</h1>
+                        <h1 className='font-bold text-2xl text-left mx-2'>30 Qbit Hyperbolic Tangent Approximation</h1>
                         <p className='mx-2 text-justify'>
-                        After learning about my mathematical proofs professor's research in quantum computing and information theory, a field I've heard about, I took my 
-                        first hands-on plunge into this domain by developing a Quantum Tic-Tac-Toe game. This project incorporated quantum superposition and entanglement 
-                        principles, allowing the simulation of over 10,000 quantum state transitions. It served as a practical exploration into the computational capabilities 
-                        of quantum algorithms, especially in managing complex game dynamics. To create the project, I utilized Qiskit for engineering efficient quantum circuit
-                         simulations, focusing on optimizing quantum gate operations. This endeavor not only deepened my understanding of quantum computing but also demonstrated 
-                         its potential in algorithmic problem-solving and creating advanced game mechanics.
-                        </p>
-                    </div>
-                )}
-    {selectedProject === 'cloud' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <div className='w-full flex justify-center mt-2 mb-2'>
-                        <img src={pipe} alt='Pipeline Architecture' className='mx-2 w-1/2'/>
-                        </div>
-                        <h1 className='font-bold text-2xl text-left mx-2'>AWS ETL Data Pipeline</h1>
-                        <p className='mx-2 text-justify'>                      
-                        I built a project that introduced me to cloud computing and AWS, focusing on creating an AWS ETL Data Pipeline. This pipeline was meticulously 
-                        designed to process data from the Open Weather Map API, utilizing Python for scripting and AWS Glue for seamless data integration. I leveraged AWS S3 buckets for efficient 
-                        data storage and AWS Redshift for robust data warehousing, ensuring a reliable and scalable storage solution. The project also featured the integration of Spark within the 
-                        AWS environment to expedite data processing, enhancing the pipeline's overall performance. To streamline the workflow, I implemented Airflow, automating the ETL process which 
-                        not only reduced the manual effort significantly but also improved the operational efficiency of the data pipeline. This experience provided me with a deep understanding of 
-                        cloud-based data management and the intricacies of managing large-scale data workflows.
-                        </p>
-                    </div>
-                )}
-    {selectedProject === 'sorting' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Sorting Algorithms Visualizer</h1>
-                        <p className='mx-2 text-justify'>
-                        I developed a website dedicated to visualizing various sorting algorithms like heap sort, bubble sort, insertion sort, quick sort, 
-                        and merge sort. This project was instrumental in enhancing my understanding of algorithmic complexities, leading to more efficient 
-                        sorting implementations. The website featured a sorting speed adjuster, allowing users to interactively manipulate the speed of the 
-                        algorithms. This interactive element not only made the complexities of these algorithms more accessible but also provided a clearer 
-                        insight into their operational mechanics, thereby aiding in user comprehension of these fundamental computer science concepts.
-                        </p>
-                    </div>
-                )}
-    {selectedProject === 'discord' && (<div className='flex-grow overflow-y-auto projectdescription border-solid border-2 border-gray-600 mt-2 mb-2'>
-                        <h1 className='font-bold text-2xl text-left mx-2'>Discord Reminder Bot</h1>
-                        <p className='mx-2 text-justify'>
-                        A simple Discord reminder bot made with java, designed for a private server shared with my girlfriend. The bot's primary function is to send 
-                        daily reminders in a specific text-channel named 'gratitude', prompting both of us to write one thing we're grateful for each 
-                        night. This small yet meaningful automation fosters a habit of reflection and gratitude in our daily routine, enhancing our c
-                        onnection and mindfulness. The bot serves as a gentle nudge to pause and appreciate the small joys and blessings in our lives, 
-                        reinforcing positive habits within our personal space on Discord.
+                        During the MIT iQuHack Quantum Computing Hackathon, held on February 2-4, 2023, our team developed a tanh approximation algorithm leveraging the 
+                        principles of entanglement and superposition, aimed at enhancing precision within the limitations of a 30-qubit system. By incorporating a blend of 
+                        Runge-Kutta methods and various degrees of Taylor series expansions, we tailored our approach to suit quantum computing's unique requirements, 
+                        focusing on optimizing both computational efficiency and algorithmic accuracy. This careful balance and innovative adaptation of classical 
+                        numerical methods to the quantum context enabled us to achieve an impressive 95% accuracy rate, culminating in our team securing the 2nd place finish at the event.
                         </p>
                     </div>
                 )}
