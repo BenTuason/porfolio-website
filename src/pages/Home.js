@@ -17,7 +17,10 @@ const Home = () => {
           <div className="intro text">
             {/* Intro Text */}
             <p className='ml-2 mr-2'>Hello! My name is Ben Tuason and my goals are to pursue a PhD in Computer Science and to reduce carbon emissions from current computing services.</p>
-            <p className='ml-2 mr-2 mt-2'>My research interests include a machine learning, deep learning, high-performance computing, cloud computing, cryptography, and optimization.</p>
+            <div className='px-2'><p className='w-full border-t-2 border-gray-600 my-2'></p></div>
+            <p className='ml-2 mr-2 mt-2'>My research interests includes machine learning, deep learning, high-performance computing, cloud computing, cybersecurity, and optimization.</p>
+            <div className='px-2'><p className='w-full border-t-2 border-gray-600 my-2'></p></div>
+
             <ul className='ml-2 mr-2 mt-2'>
               Skills:
               <li>- Python (Classiq, Qiskit, Tensorflow, Pytorch, Numpy, Matplotlib, Scipy, Web3py)</li>
@@ -28,6 +31,8 @@ const Home = () => {
               <li>- Matlab, R</li>
 
             </ul>
+            <div className='px-2'><p className='w-full border-t-2 border-gray-600 my-2'></p></div>
+
           </div>
           <div className="studies py-3">
             {/* Studies */}
